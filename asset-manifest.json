@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/quarantimes/static/css/main.ada9239c.chunk.css",
-    "main.js": "/quarantimes/static/js/main.c6f73b50.chunk.js",
-    "main.js.map": "/quarantimes/static/js/main.c6f73b50.chunk.js.map",
-    "runtime-main.js": "/quarantimes/static/js/runtime-main.c4bf3550.js",
-    "runtime-main.js.map": "/quarantimes/static/js/runtime-main.c4bf3550.js.map",
-    "static/js/2.935d919f.chunk.js": "/quarantimes/static/js/2.935d919f.chunk.js",
-    "static/js/2.935d919f.chunk.js.map": "/quarantimes/static/js/2.935d919f.chunk.js.map",
-    "index.html": "/quarantimes/index.html",
-    "precache-manifest.d73ec642ef918d6a2e90b9236ed92025.js": "/quarantimes/precache-manifest.d73ec642ef918d6a2e90b9236ed92025.js",
-    "service-worker.js": "/quarantimes/service-worker.js",
-    "static/css/main.ada9239c.chunk.css.map": "/quarantimes/static/css/main.ada9239c.chunk.css.map",
-    "static/js/2.935d919f.chunk.js.LICENSE.txt": "/quarantimes/static/js/2.935d919f.chunk.js.LICENSE.txt"
+    "main.css": "/losing-my-dimension/static/css/main.4b09a073.chunk.css",
+    "main.js": "/losing-my-dimension/static/js/main.9658cc50.chunk.js",
+    "main.js.map": "/losing-my-dimension/static/js/main.9658cc50.chunk.js.map",
+    "runtime-main.js": "/losing-my-dimension/static/js/runtime-main.e3377d74.js",
+    "runtime-main.js.map": "/losing-my-dimension/static/js/runtime-main.e3377d74.js.map",
+    "static/js/2.5946e4d4.chunk.js": "/losing-my-dimension/static/js/2.5946e4d4.chunk.js",
+    "static/js/2.5946e4d4.chunk.js.map": "/losing-my-dimension/static/js/2.5946e4d4.chunk.js.map",
+    "index.html": "/losing-my-dimension/index.html",
+    "precache-manifest.9779756ea804cad2f09fe634615e746a.js": "/losing-my-dimension/precache-manifest.9779756ea804cad2f09fe634615e746a.js",
+    "service-worker.js": "/losing-my-dimension/service-worker.js",
+    "static/css/main.4b09a073.chunk.css.map": "/losing-my-dimension/static/css/main.4b09a073.chunk.css.map",
+    "static/js/2.5946e4d4.chunk.js.LICENSE.txt": "/losing-my-dimension/static/js/2.5946e4d4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c4bf3550.js",
-    "static/js/2.935d919f.chunk.js",
-    "static/css/main.ada9239c.chunk.css",
-    "static/js/main.c6f73b50.chunk.js"
+    "static/js/runtime-main.e3377d74.js",
+    "static/js/2.5946e4d4.chunk.js",
+    "static/css/main.4b09a073.chunk.css",
+    "static/js/main.9658cc50.chunk.js"
   ]
 }

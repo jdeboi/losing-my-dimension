@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import ListItem from './ListItem';
 
 class FinderSubmenu extends React.Component {
@@ -43,7 +42,7 @@ class FinderSubmenu extends React.Component {
   render() {
     var title = this.props.title;
     var icon= "";
-    if (title == "") {
+    if (title === "") {
       icon = <i className={this.props.icon}></i>
     }
     const specialClass = this.props.specialClass;

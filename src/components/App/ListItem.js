@@ -1,20 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-class ListItem extends React.Component {
+const ListItem = (props) => {
 
-  constructor(props) {
-    super(props);
-  }
 
-  render() {
-    const title = this.props.title;
+    const title = props.title;
     const parser = new DOMParser();
-    const shortcut = this.props.shortcut;
+    const shortcut = props.shortcut;
     const parsedString = parser.parseFromString(shortcut, 'text/html');
     const decodedString = parsedString.body.innerHTML;
     const classn = shortcut !== '' ? 'shortcut': '';
-    const link = this.props.link;
+    const link = props.link;
 
     if (link !== '') {
       return (
@@ -26,7 +22,6 @@ class ListItem extends React.Component {
     return (
       <li key={title} className={classn} shortcut={decodedString}>{title}</li>
     );
-  }
 }
 
 export default ListItem

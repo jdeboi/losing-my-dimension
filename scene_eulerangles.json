@@ -1,0 +1,119 @@
+{
+    "assets": [
+        {
+            "uri": "http://www.ontoeng.com/1aFactoryProject01#M2",
+            "rootNodeName": "M2",
+            "class": "http://www.ontoeng.com/factory#MachineTool",
+            "mergeAndExportMeshes": false,
+            "regenerateNormals": false,
+            "orientation": [
+                0.0,
+                -2.6179937107350077,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "position": [
+                708.0,
+                0.0,
+                703.0
+            ],
+            "file": "binaryfiles/machines/TC52/tc52.obj"
+        },
+        {
+            "uri": "http://www.ontoeng.com/1aFactoryProject01#TC108.1",
+            "rootNodeName": "TC108.1",
+            "class": "http://www.ontoeng.com/factory#MachineTool",
+            "mergeAndExportMeshes": false,
+            "regenerateNormals": false,
+            "orientation": [
+                0.0,
+                -1.3089969760595748,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "position": [
+                817.0,
+                0.0,
+                387.0
+            ],
+            "file": "binaryfiles/machines/TC108/TC108.obj"
+        },
+        {
+            "uri": "http://www.ontoeng.com/1aFactoryProject01#B3",
+            "rootNodeName": "B3",
+            "class": "http://www.ontoeng.com/factory#BufferElement",
+            "mergeAndExportMeshes": false,
+            "regenerateNormals": false,
+            "orientation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "position": [
+                317.0,
+                0.0,
+                840.0
+            ],
+            "file": "binaryfiles/elements/pallet/pallet.obj"
+        },
+        {
+            "uri": "http://www.ontoeng.com/1aFactoryProject01#bufferTypeA.1",
+            "rootNodeName": "bufferTypeA.1",
+            "class": "http://www.ontoeng.com/factory#BufferElement",
+            "mergeAndExportMeshes": false,
+            "regenerateNormals": false,
+            "orientation": [
+                0.0,
+                2.6179937107350077,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "position": [
+                142.0,
+                0.0,
+                884.0
+            ],
+            "file": "binaryfiles/elements/pallet/pallet.obj"
+        },
+        {
+            "uri": "http://www.ontoeng.com/1aFactoryProject01#B4",
+            "rootNodeName": "B4",
+            "class": "http://www.ontoeng.com/factory#BufferElement",
+            "mergeAndExportMeshes": false,
+            "regenerateNormals": false,
+            "orientation": [
+                0.0,
+                0.5235989645725339,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "position": [
+                446.99999999999997,
+                0.0,
+                804.0000000000001
+            ],
+            "file": "binaryfiles/elements/pallet/pallet.obj"
+        }
+    ]
+}

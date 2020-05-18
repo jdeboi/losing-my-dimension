@@ -5,8 +5,9 @@
 }
 
 /*--Header--*/
+/* a3a3a3 */
 .Header {
-  background: linear-gradient(to bottom, #e6e6e6 0%, #a3a3a3 100%);
+  background: linear-gradient(to bottom, #e6e6e6 0%, #c3c3c3 100%);
   display: block;
   font-size: 1.2em;
   height: 1.8em;
@@ -106,6 +107,7 @@ a {
   top: 2.5em;
   width: auto;
   white-space: nowrap;
+  z-index: 200;
 }
 .submenu ul.volume {
   height: 10em;

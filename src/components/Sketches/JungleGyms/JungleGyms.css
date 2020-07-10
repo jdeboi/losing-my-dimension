@@ -1,0 +1,73 @@
+.JungleGyms {
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url("/images/galaxy.jpg");
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+.JungleGyms .Frame {
+  z-index: 400;
+}
+
+.JungleGyms .react-player {
+  /* position: fixed; */
+
+  margin: auto;
+
+  overflow: hidden;
+}
+
+.JungleGyms .react-player .insta {
+  z-index: -500;
+}
+
+
+@media (min-aspect-ratio: 16/9) {
+  .JungleGyms .insta video {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .JungleGyms .insta video {
+    width: auto !important;
+    height: 100% !important;
+  }
+}
+
+.JungleGyms .mainContent {
+  padding-top: 22px;
+  z-index:10;
+  pointer-events: none;
+}
+
+
+.JungleGyms #babylon-canvas {
+  pointer-events: all;
+  z-index:200;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .JungleGyms .gym video {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .JungleGyms .gym video {
+    width: auto !important;
+    height: 100% !important;
+  }
+}
+
+.JungleGyms .amazonSV {
+  /* position: absolute;
+  top: 0px; */
+}

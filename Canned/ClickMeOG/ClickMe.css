@@ -1,0 +1,24 @@
+.ClickMe {
+  background-color: black;
+  height:100%;
+  width:100%;
+  top: 0px;
+  left: 0px;
+  background-image: url("/videos/face.gif");
+
+  /* cursor: pointer !important; */
+  cursor: url("/images/cursor/pointer.png"), auto;
+  background-repeat: repeat;
+}
+
+/* https://media.giphy.com/media/3o7btNNSCfjnn14imk/giphy.gif */
+/* peeps glitch https://media.giphy.com/media/2shBNJSPTrpWvoXfpD/source.gif */
+
+
+.ClickMe .content {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.ClickMe .window {
+  background-color: rgba(255, 255, 255, 0);
+}

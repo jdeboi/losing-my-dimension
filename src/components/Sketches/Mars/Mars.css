@@ -1,0 +1,22 @@
+.Mars {
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: blue;
+}
+
+
+
+.Mars-bg {
+  background-image: url("/images/space/mars/canyon.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

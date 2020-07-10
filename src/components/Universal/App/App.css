@@ -1,0 +1,101 @@
+
+
+.App {
+  display: flex;
+  background: black;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+  /* background: url(https://harnerdesigns.com/wp-content/uploads/2018/05/universe-wallpaper.jpg) center center/cover fixed no-repeat; */
+  font-family: consoleFont, 'Helvetica', sans-serif;
+  /* margin: 0; */
+  overflow: hidden;
+  padding: 0;
+  perspective-origin: 0 0;
+}
+
+.App-content {
+  flex: 1 1 auto;
+}
+
+.Frame-box {
+  /* padding-top: 36px; */
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-top: 0px;
+
+  position: relative;
+  /* making position relative [b/c macbook air clouds need to be absolute to prevent frames from stacking below, but when absolute they over extend beyond app. ? relative makes clouds div 100% wide relative to frame-box rather than entire page] */
+}
+
+.inner-outline {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  /* border-bottom: 3px solid black; */
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+#babylon-canvas {
+  width:100%;
+  height:100%;
+
+  top:0;
+  /* needs absolute so that frames don't appear below page. dunno why */
+  position: absolute;
+
+  /* making 0 for hard drives */
+  z-index: 0;
+}
+
+
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#fps {
+  position: absolute;
+  background-color: black;
+  border: 2px solid red;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  top: 45px;
+  right: 10px;
+  width: 60px;
+  height: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: consoleFont;
+  src: url("/fonts/dogica.ttf");
+  /* src: url("/fonts/rainyhearts.ttf"); */
+}
+
+header.menuTheme, .menuTheme {
+  color: white;
+  background: black;
+}
+
+.dottedBG1 {
+  background-image:
+  radial-gradient(ellipse farthest-corner, transparent 0%, transparent 35%, #fff 30%, #fff 40%, transparent 90%),
+  radial-gradient(ellipse farthest-corner at 0px 0px, transparent 0%, transparent 20%, #fff 15%, #fff 20%, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 8px 8px, transparent 0%, transparent 20%, #fff 15%, #fff 20%, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 0px 8px, transparent 0%, transparent 20%, #fff 15%, #fff 20%, transparent 40%),
+  radial-gradient(ellipse farthest-corner at 8px 0px, transparent 0%, transparent 20%, #fff 15%, #fff 20%, transparent 50%),
+  linear-gradient(120deg, #11ffff 0,  #ff11ff 100%);
+
+  background-size: 8px 8px, 8px 8px, 8px 8px, 8px 8px, 8px 8px, 100% 100%;
+}

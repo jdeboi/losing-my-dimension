@@ -1,0 +1,27 @@
+.Stair {
+  position: relative;
+}
+
+.step {
+  position: absolute;
+  background: white;
+  border-top: 24px solid black;
+  border-right: 24px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 6px;
+  /* box-shadow: 10px 10px 20px #000000; */
+  z-index: 201;
+
+  /* background-repeat:no-repeat; */
+
+
+
+}
+
+.firstStep {
+  /* margin-top: -24px; */
+    z-index: 199;
+}
+.lastStep {
+  border-right: 1px solid black;
+}

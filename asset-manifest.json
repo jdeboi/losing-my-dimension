@@ -1,22 +1,39 @@
 {
   "files": {
-    "main.css": "/losing-my-dimension/static/css/main.d62ffbb5.chunk.css",
-    "main.js": "/losing-my-dimension/static/js/main.5cccb3a4.chunk.js",
-    "main.js.map": "/losing-my-dimension/static/js/main.5cccb3a4.chunk.js.map",
+    "main.css": "/losing-my-dimension/static/css/main.bb1ee75f.chunk.css",
+    "main.js": "/losing-my-dimension/static/js/main.4641b989.chunk.js",
+    "main.js.map": "/losing-my-dimension/static/js/main.4641b989.chunk.js.map",
     "runtime-main.js": "/losing-my-dimension/static/js/runtime-main.e3377d74.js",
     "runtime-main.js.map": "/losing-my-dimension/static/js/runtime-main.e3377d74.js.map",
-    "static/js/2.b26f1b47.chunk.js": "/losing-my-dimension/static/js/2.b26f1b47.chunk.js",
-    "static/js/2.b26f1b47.chunk.js.map": "/losing-my-dimension/static/js/2.b26f1b47.chunk.js.map",
+    "static/js/2.f72e25c9.chunk.js": "/losing-my-dimension/static/js/2.f72e25c9.chunk.js",
+    "static/js/2.f72e25c9.chunk.js.map": "/losing-my-dimension/static/js/2.f72e25c9.chunk.js.map",
     "index.html": "/losing-my-dimension/index.html",
-    "precache-manifest.a393dd509265c7a0593ce8427fe3c502.js": "/losing-my-dimension/precache-manifest.a393dd509265c7a0593ce8427fe3c502.js",
+    "precache-manifest.01f1b5f08f673d3b2dc6d37d8ca92fbe.js": "/losing-my-dimension/precache-manifest.01f1b5f08f673d3b2dc6d37d8ca92fbe.js",
     "service-worker.js": "/losing-my-dimension/service-worker.js",
-    "static/css/main.d62ffbb5.chunk.css.map": "/losing-my-dimension/static/css/main.d62ffbb5.chunk.css.map",
-    "static/js/2.b26f1b47.chunk.js.LICENSE.txt": "/losing-my-dimension/static/js/2.b26f1b47.chunk.js.LICENSE.txt"
+    "static/css/main.bb1ee75f.chunk.css.map": "/losing-my-dimension/static/css/main.bb1ee75f.chunk.css.map",
+    "static/js/2.f72e25c9.chunk.js.LICENSE.txt": "/losing-my-dimension/static/js/2.f72e25c9.chunk.js.LICENSE.txt",
+    "static/media/0.png": "/losing-my-dimension/static/media/0.32b7aa62.png",
+    "static/media/1.png": "/losing-my-dimension/static/media/1.47599ef2.png",
+    "static/media/10.png": "/losing-my-dimension/static/media/10.1e6a8e72.png",
+    "static/media/11.png": "/losing-my-dimension/static/media/11.6e21d3da.png",
+    "static/media/2.png": "/losing-my-dimension/static/media/2.f93fc873.png",
+    "static/media/3.png": "/losing-my-dimension/static/media/3.e64897a9.png",
+    "static/media/4.png": "/losing-my-dimension/static/media/4.b692a53e.png",
+    "static/media/5.png": "/losing-my-dimension/static/media/5.a1b7768d.png",
+    "static/media/6.png": "/losing-my-dimension/static/media/6.490c6cbe.png",
+    "static/media/7.png": "/losing-my-dimension/static/media/7.5f8cc232.png",
+    "static/media/8.png": "/losing-my-dimension/static/media/8.27fedc65.png",
+    "static/media/9.png": "/losing-my-dimension/static/media/9.13ccb29c.png",
+    "static/media/WetStreams.css": "/losing-my-dimension/static/media/blk2000.12000ca5.png",
+    "static/media/clouds3d.mp4": "/losing-my-dimension/static/media/clouds3d.767d5529.mp4",
+    "static/media/Spacetimes.css": "/losing-my-dimension/static/media/dogica.57d7ce13.ttf",
+    "static/media/noframe.mp4": "/losing-my-dimension/static/media/noframe.140b6945.mp4",
+    "static/media/parrot.png": "/losing-my-dimension/static/media/parrot.0797e4bb.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e3377d74.js",
-    "static/js/2.b26f1b47.chunk.js",
-    "static/css/main.d62ffbb5.chunk.css",
-    "static/js/main.5cccb3a4.chunk.js"
+    "static/js/2.f72e25c9.chunk.js",
+    "static/css/main.bb1ee75f.chunk.css",
+    "static/js/main.4641b989.chunk.js"
   ]
 }

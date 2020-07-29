@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/losing-my-dimension/precache-manifest.0be201b11705cffbdad4bdcfe14a80e0.js"
+  "/losing-my-dimension/precache-manifest.fd8b315a5c1189937705414b83753e7a.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/losing-my-dimension/static/css/main.8458c2d8.chunk.css",
-    "main.js": "/losing-my-dimension/static/js/main.e08a22e4.chunk.js",
-    "main.js.map": "/losing-my-dimension/static/js/main.e08a22e4.chunk.js.map",
+    "main.css": "/losing-my-dimension/static/css/main.b1017de7.chunk.css",
+    "main.js": "/losing-my-dimension/static/js/main.d54c20b3.chunk.js",
+    "main.js.map": "/losing-my-dimension/static/js/main.d54c20b3.chunk.js.map",
     "runtime-main.js": "/losing-my-dimension/static/js/runtime-main.e3377d74.js",
     "runtime-main.js.map": "/losing-my-dimension/static/js/runtime-main.e3377d74.js.map",
-    "static/js/2.0075427c.chunk.js": "/losing-my-dimension/static/js/2.0075427c.chunk.js",
-    "static/js/2.0075427c.chunk.js.map": "/losing-my-dimension/static/js/2.0075427c.chunk.js.map",
+    "static/js/2.d7b4cfdb.chunk.js": "/losing-my-dimension/static/js/2.d7b4cfdb.chunk.js",
+    "static/js/2.d7b4cfdb.chunk.js.map": "/losing-my-dimension/static/js/2.d7b4cfdb.chunk.js.map",
     "index.html": "/losing-my-dimension/index.html",
-    "precache-manifest.0be201b11705cffbdad4bdcfe14a80e0.js": "/losing-my-dimension/precache-manifest.0be201b11705cffbdad4bdcfe14a80e0.js",
+    "precache-manifest.fd8b315a5c1189937705414b83753e7a.js": "/losing-my-dimension/precache-manifest.fd8b315a5c1189937705414b83753e7a.js",
     "service-worker.js": "/losing-my-dimension/service-worker.js",
-    "static/css/main.8458c2d8.chunk.css.map": "/losing-my-dimension/static/css/main.8458c2d8.chunk.css.map",
-    "static/js/2.0075427c.chunk.js.LICENSE.txt": "/losing-my-dimension/static/js/2.0075427c.chunk.js.LICENSE.txt",
+    "static/css/main.b1017de7.chunk.css.map": "/losing-my-dimension/static/css/main.b1017de7.chunk.css.map",
+    "static/js/2.d7b4cfdb.chunk.js.LICENSE.txt": "/losing-my-dimension/static/js/2.d7b4cfdb.chunk.js.LICENSE.txt",
     "static/media/0.png": "/losing-my-dimension/static/media/0.32b7aa62.png",
     "static/media/1.png": "/losing-my-dimension/static/media/1.47599ef2.png",
     "static/media/10.png": "/losing-my-dimension/static/media/10.1e6a8e72.png",
@@ -42,8 +42,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e3377d74.js",
-    "static/js/2.0075427c.chunk.js",
-    "static/css/main.8458c2d8.chunk.css",
-    "static/js/main.e08a22e4.chunk.js"
+    "static/js/2.d7b4cfdb.chunk.js",
+    "static/css/main.b1017de7.chunk.css",
+    "static/js/main.d54c20b3.chunk.js"
   ]
 }

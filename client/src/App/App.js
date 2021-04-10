@@ -10,7 +10,7 @@ import socket from "../components/shared/Socket/Socket";
 import Header from '../components/shared/Header/Header';
 import MobileFooter from '../components/shared/Header/MobileFooter/MobileFooter';
 import Chat from '../components/shared/Chat/Chat';
-import YouTube from '../components/shared/LiveStream/YouTube';
+// import YouTube from '../components/shared/LiveStream/YouTube';
 import ReactAudioPlayer from 'react-audio-player';
 
 // import FPSStats from "react-fps-stats";
@@ -89,7 +89,7 @@ class App extends React.Component {
       roomCount: { "flush": 0, "click-me-baby": 0, "macbook-air": 0, "hard-drives-on-seashores": 0, "wet-streams": 0, "jungle-gyms": 0, "cloud-confessional": 0, "esc-to-mars": 0, "xfinity-depths": 0, "wasted-days": 0, "home-page": 0, "gallery": 0, "blind-eye": 0 }
     };
 
-    this.isClosed = true;
+    this.isClosed = false;
     this.isMenuOn = false;
   }
 
@@ -430,7 +430,7 @@ class App extends React.Component {
         <RoomDecal startMedia={this.startMedia} hasLoadedRoom={this.state.hasLoadedRoom} users={this.state.users} />
         <Welcome isClosed={this.isClosed} user={this.props.user} hasAvatar={this.state.hasAvatar} showWelcome={this.state.showWelcome} closeWelcome={this.closeWelcome} />
         <MobileFooter currentPage={currentPage} user={this.props.user} avatarClicked={this.avatarClicked} />
-        {this.isClosed ? null : <YouTube />}
+        {/* {this.isClosed ? null : <YouTube />} */}
         { user.comp === null && ((currentPage === "gallery" && !this.state.showWelcome) ||
           ui.compositionStarted) ?
           <ReactAudioPlayer

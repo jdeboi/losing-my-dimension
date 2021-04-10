@@ -165,7 +165,7 @@ class Chat extends React.Component {
       this.setState({ hostBotJustAsked: true });
     }
     else {
-      let phrase = "Have you found the live stream or Zoom? If not, check the top menu bar to toggle the live stream!";
+      let phrase = "Have you found the Zoom session? If not, check the top menu bar! Also make sure the red lens is over your LEFT eye!";
       this.props.addMessage({ to: "me", from: "hostBot", message: phrase, time: new Date(), avatar: userActiveChat.avatar });
       this.setState({ hostBotJustAsked: false });
     }

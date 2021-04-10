@@ -28,7 +28,7 @@ class YouTube extends React.Component {
         const style = { height: 20, width: w - ui.edgeSpacing };
 
         return (
-            <Frame title="live stream"
+            <Frame title="zoom"
                 bounded={true}
                 isHidden={this.props.menu.isLiveStreamHidden}
                 onHide={this.props.hideLiveStream}

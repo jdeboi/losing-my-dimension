@@ -27,6 +27,7 @@ import Dancer from '../../sketches/Gallery/p5/components/Dancer';
 // CONFIG
 import { globalConfig, p5ToDomCoords } from "../../sketches/Gallery/constants";
 var isClosed;
+var cameraPosition;
 
 //////////////
 // BUILDING 
@@ -90,6 +91,7 @@ export default (props) => {
     isMobile = props.isMobile;
     roomCount = props.roomCount;
     isClosed = props.isClosed;
+    cameraPosition = props.cameraPosition;
 
     const preload = (p5) => {
         const url = "https://lmd-bucket.s3.us-east-2.amazonaws.com/sketches/gallery/";
@@ -122,7 +124,7 @@ export default (props) => {
         barEmojis[2] = p5.loadImage(url + "emojis/wine.png");
         barEmojis[3] = p5.loadImage(url + "emojis/cocktail.png");
         barEmojis[4] = p5.loadImage(url + "emojis/chat.png");
-        
+
         //////////////
         // plants
         tree = p5.loadImage(url + "grass/tree.png");
@@ -290,30 +292,18 @@ export default (props) => {
             updateDivs(userEase, users, doors, divs, true);
         treeSlider.update(p5);
         // updateUserEase(p5);
-        updateView(p5, 18000);
-
+        // updateView(p5, 18000);
+        updateCamera(p5);
     };
 
-    const updateView = (p5, t) => {
+    const updateCamera = (p5) => {
+        stepTo = p5ToDomCoords(cameraPosition[0], cameraPosition[1]); //p5.random(-1000, 1000);
+        // step(p5);
+        userEase.x = stepTo.x;
+        userEase.y = stepTo.y;
+    }
 
-        if (p5.millis() - viewTime > t) {
-
-            viewTime = p5.millis();
-
-            let coords = [
-                [5, 5],
-                [20, 5],
-                [20, 18],
-                [16, 33],
-                [5, 33],
-                [12, 14]
-            ]
-            let coord = coords[stepToIndex++%coords.length];
-            stepTo = p5ToDomCoords(coord[0], coord[1]); //p5.random(-1000, 1000);
-
-            //   userEase.y = -1000; //p5.random(-10, 1000);
-        }
-
+    const step = (p5) => {
         // transition to location
         let stepS = 15;
         if (p5.abs(stepTo.x - userEase.x) <= stepS) {
@@ -335,6 +325,28 @@ export default (props) => {
         else if (userEase.y > stepTo.y) {
             userEase.y -= stepS;
         }
+    }
+
+    const updateView = (p5, t) => {
+
+        if (p5.millis() - viewTime > t) {
+
+            viewTime = p5.millis();
+
+            let coords = [
+                [5, 5],
+                [20, 5],
+                [20, 18],
+                [16, 33],
+                [5, 33],
+                [12, 14]
+            ]
+            let coord = coords[stepToIndex++ % coords.length];
+            stepTo = p5ToDomCoords(coord[0], coord[1]); //p5.random(-1000, 1000);
+
+            //   userEase.y = -1000; //p5.random(-10, 1000);
+        }
+        step();
     }
 
     const drawOverTarget = (p5) => {

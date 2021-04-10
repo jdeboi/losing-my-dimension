@@ -233,10 +233,20 @@ class Header extends React.Component {
     );
   }
 
+  liveStreamClick = () => {
+    this.props.toggleLiveStream();
+    this.openInNewTab('https://tulane.zoom.us/j/96008889892', "_blank");
+  }
+
+  openInNewTab = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
+  }
+
 
   getLiveStreamLi = () => {
     const { menu, user, isClosed } = this.props;
-    let classVol = "expandable icon" + (menu.isLiveStreamHidden ? " closed" : " opened");
+    let classVol = "expandable icon" + " closed";//(menu.isLiveStreamHidden ? " closed" : " opened");
     classVol += ((this.state.liveStreamOn && !menu.hasClickedLiveStream) ? " liveStreamOn" : "");
 
     if (isClosed)
@@ -244,7 +254,8 @@ class Header extends React.Component {
     else if (user.comp !== null)
       return null;
     return (
-      <li className={classVol} onClick={this.props.toggleLiveStream}>
+      <li className={classVol} onClick={this.liveStreamClick}>
+        {/* onClick={this.props.toggleLiveStream} */}
         {/* <Volume isMuted={this.props.music.isMuted} /> */}
         {/* {this.getVolumeIcon()} */}
         <LiveIcon />

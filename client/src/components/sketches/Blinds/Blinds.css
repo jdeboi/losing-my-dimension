@@ -22,8 +22,6 @@
     width: 160px;
     height: 160px;
     background-repeat: repeat; }
-  .Blinds .windowDiv .background1 {
-    background-image: url(https://lmd-bucket.s3.us-east-2.amazonaws.com/sketches/blinds/palm.png); }
   .Blinds .windowDiv .windowFrame {
     background-image: url(https://lmd-bucket.s3.us-east-2.amazonaws.com/sketches/blinds/blinds.png);
     width: 160px;
@@ -38,10 +36,3 @@
     pointer-events: all; }
     .Blinds .windowDiv .windowFrame:hover {
       height: 290px; }
-  .Blinds .windowDiv .windowFrame2 {
-    background-image: url(https://lmd-bucket.s3.us-east-2.amazonaws.com/sketches/blinds/window.png);
-    width: 350px;
-    height: 300px;
-    top: 0;
-    background-size: 86% 86%;
-    position: absolute; }

@@ -164,7 +164,7 @@ class Header extends React.Component {
           {/* <li className={classUserIcons} onClick={this.props.toggleUserIcons}><UsersIcon fontSize="inherit" /></li> */}
           {this.getMapLi()}
           {this.getFaqLi()}
-          {this.getLiveStreamLi()}
+          {/* {this.getLiveStreamLi()} */}
           <li></li>
           <li><Clock /></li>
           {/* <li></li> */}

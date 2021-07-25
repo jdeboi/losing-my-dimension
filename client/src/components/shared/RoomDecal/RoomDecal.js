@@ -258,7 +258,6 @@ class RoomDecal extends React.Component {
         this.props.startMedia();
         this.props.startComposition();
         // this.props.onHide();
-        // this.props.startMedia();
     }
 
     getButtons = (step) => {

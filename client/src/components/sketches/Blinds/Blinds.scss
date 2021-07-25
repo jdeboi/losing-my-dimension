@@ -39,10 +39,10 @@ $windowS:160px;
       background-repeat: repeat;
     }
 
-    .background1 {
-      background-image: url(https://lmd-bucket.s3.us-east-2.amazonaws.com/sketches/blinds/palm.png);
+    // .background1 {
+    //   background-image: url(https://lmd-bucket.s3.us-east-2.amazonaws.com/sketches/blinds/palm.png);
 
-    }
+    // }
 
 
     .windowFrame {
@@ -63,17 +63,17 @@ $windowS:160px;
         height: 290px;
       }
     }
-    .windowFrame2 {
-      background-image: url(https://lmd-bucket.s3.us-east-2.amazonaws.com/sketches/blinds/window.png);
-      width: 350px;
-      // opacity: .5;
-      height: 300px;
-      top: 0;
-      background-size: 86% 86%;
-      // background-size: 97% 100%;
-      // background-position: -20px 0px;
-      position: absolute;
-    }
+    // .windowFrame2 {
+    //   background-image: url(https://lmd-bucket.s3.us-east-2.amazonaws.com/sketches/blinds/window.png);
+    //   width: 350px;
+    //   // opacity: .5;
+    //   height: 300px;
+    //   top: 0;
+    //   background-size: 86% 86%;
+    //   // background-size: 97% 100%;
+    //   // background-position: -20px 0px;
+    //   position: absolute;
+    // }
   }
 
 

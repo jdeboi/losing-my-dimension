@@ -8,7 +8,7 @@ import { loadingApp } from '../../../store/actions';
 // sketches
 import MacbookAir from '../../sketches/MacbookAir/MacbookAir';
 import JungleGyms from '../../sketches/JungleGyms/JungleGyms';
-import HardDrives from '../../sketches/HardDrives/HardDrives';
+import HardDrives from '../../sketches/HardDrives/HardDrivesOG';
 import Mars from '../../sketches/Mars/Mars';
 import WetStreams from '../../sketches/WetStreams/WetStreams';
 import Confessional from '../../sketches/Confessional/Confessional';

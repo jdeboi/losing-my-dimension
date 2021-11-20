@@ -20,13 +20,16 @@ export default function MFADeets(props) {
         <div className="MFA-txt">
           <div style={{fontSize: fonts[0], paddingBottom: "0px"}}>Losing</div>
           <div style={{fontSize: fonts[0], paddingBottom: "0px"}}>My</div>
-          <div style={{fontSize: fonts[0], paddingBottom: "40px"}}>Dimension</div>
+          <div style={{fontSize: fonts[0], paddingBottom: "80px"}}>Dimension</div>
 
-          <div style={{fontSize: fonts[1], paddingBottom: "40px"}}><a href="https://www.instagram.com/jdeboi/">Jenna deBoisblanc</a></div>
+          <div style={{fontSize: fonts[3], paddingBottom: "10px"}}><a href="https://www.instagram.com/jdeboi/">Jenna deBoisblanc</a></div>
 
-          <div style={{fontSize: fonts[3], paddingBottom: "10px"}}>Tulane University</div>
+          {/* <div style={{fontSize: fonts[3], paddingBottom: "10px"}}>Tulane University</div>
           <div style={{fontSize: fonts[2], paddingBottom: "10px"}}>MFA Thesis Exhibition</div>
-          <div style={{fontSize: fonts[3], paddingBottom: "10px"}}>April 2021</div>
+          <div style={{fontSize: fonts[3], paddingBottom: "10px"}}>April 2021</div> */}
+          {/* <div style={{fontSize: fonts[3], paddingBottom: "10px"}}>reflections on spacetime</div>
+          <div style={{fontSize: fonts[3], paddingBottom: "10px"}}>in quarantine</div> */}
+          <div style={{fontSize: fonts[3], paddingBottom: "10px"}}>2021</div>
         </div>
       </div>
 

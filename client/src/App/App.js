@@ -90,7 +90,7 @@ class App extends React.Component {
     };
 
     this.isClosed = false;
-    this.isMenuOn = false;
+    this.isMenuOn = true;
   }
 
 

@@ -69,7 +69,6 @@ class Confessional extends React.Component {
 
   onSubmit = () => {
     alert("Thanks for your submission. Uploading to the cloud...");
-    this.props.history.push("/confessions");
   }
 
   toggleAudio = () => {

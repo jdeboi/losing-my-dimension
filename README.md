@@ -15,19 +15,15 @@ The original exhibition also ran a Node/socket.io server for the multiplayer gal
 Runs on current Node (20+). The old webpack needs `--openssl-legacy-provider`, which the npm scripts already set.
 
 ```
-cd client
 npm install --legacy-peer-deps
-npm start      # dev server
-npm run build  # static output in client/build
+npm start      # dev server at http://localhost:3000/losing-my-dimension
+npm run build  # static output in build/
 ```
 
 ## Deploying
-Any static host works. `client/public/_redirects` sends every path to `index.html`, so links straight to a sketch (e.g. `/flush`) work on Netlify and Cloudflare Pages.
+Pushing to `main` builds and deploys to GitHub Pages via [.github/workflows/deploy.yml](.github/workflows/deploy.yml), served at [jdeboi.com/losing-my-dimension](https://jdeboi.com/losing-my-dimension/).
 
-- Root directory: `client`
-- Build command: `npm install --legacy-peer-deps && npm run build`
-- Output directory: `build`
-- Env: `NODE_VERSION=20`, `CI=false` (so lint warnings don't fail the build)
+The site lives under `/losing-my-dimension/` (set by `homepage` in `package.json`). GitHub Pages can't rewrite URLs, so the build copies `index.html` to `404.html`; links straight to a sketch (e.g. `/losing-my-dimension/flush`) load the app, which then routes to the right sketch.
 
 ## License
 [Attribution-NonCommercial-ShareAlike](license.md)

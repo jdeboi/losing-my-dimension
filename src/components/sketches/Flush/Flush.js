@@ -68,6 +68,8 @@ class Flush extends React.Component {
     var mat = new StandardMaterial("groundMaterial", this.scene);
     this.vidTex = new VideoTexture("video", window.AWS + "/vorTech/whirl2.mp4", this.scene, true);
     this.vidTex.video.volume = 0;
+    // always silent, so mark muted to let browsers autoplay it
+    this.vidTex.video.muted = true;
     // this.vidTex.video.play(); // is this needed?
     mat.diffuseTexture = this.vidTex;
 

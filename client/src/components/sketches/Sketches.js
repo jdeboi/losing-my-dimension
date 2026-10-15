@@ -16,7 +16,7 @@ export const rooms = [
 ];
 
 const sk = [...rooms];
-sk.unshift({ id: 0, short: "gallery", title: "gallery", label: "gallery", link: "", classN: "gallery", shortcut: "&#x2318;0" })
+sk.unshift({ id: 0, short: "gallery", title: "index", label: "index", link: "", classN: "gallery", shortcut: "&#x2318;0" })
 export const sketches = sk;
 
 

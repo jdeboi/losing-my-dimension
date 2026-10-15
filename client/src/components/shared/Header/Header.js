@@ -8,23 +8,14 @@ import Clock from './components/Clock';
 // import Volume from '../Volume/VolumeMute';
 
 // icons
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import ChatIcon from '@material-ui/icons/Chat';
-import NotifyIcon from '@material-ui/icons/Notifications'
-import MapIcon from '@material-ui/icons/Room';
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 // import Volume from '@material-ui/icons/VolumeMute';
 import VolumeUp from '@material-ui/icons/VolumeUp';
 import VolumeOff from '@material-ui/icons/VolumeOff';
-import LiveIcon from '@material-ui/icons/LiveTv';
-import VolumeDown from '@material-ui/icons/VolumeDown';
 
 // import UsersIcon from '@material-ui/icons/SupervisedUserCircle';
 
 // store
 import { connect } from 'react-redux';
-import { toggleMap, toggleFaq, toggleChat, toggleUserIcons, toggleLiveStream } from '../../../store/actions/menuItems';
-import { resetMessgeNotification } from '../../../store/actions/messages';
 import { toggleVolume } from '../../../store/actions/music';
 
 import { sketches } from '../../sketches/Sketches';
@@ -50,18 +41,6 @@ class Header extends React.Component {
       liveStreamOn: false
     }
 
-  }
-
-  componentDidMount() {
-    this.liveStreamInterval = setInterval(this.liveStreamToggle, 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.liveStreamInterval);
-  }
-
-  liveStreamToggle = () => {
-    this.setState({ liveStreamOn: !this.state.liveStreamOn });
   }
 
   // shouldComponentUpdate(nextProps) {
@@ -160,18 +139,8 @@ class Header extends React.Component {
           {/* <li><span className="currentPage">/{this.props.currentPage}</span></li> */}
         </ul>
         <ul className="right">
-          {this.getChatLi()}
-          {/* <li className={classUserIcons} onClick={this.props.toggleUserIcons}><UsersIcon fontSize="inherit" /></li> */}
-          {this.getMapLi()}
-          {this.getFaqLi()}
-          {/* {this.getLiveStreamLi()} */}
-          <li></li>
           <li><Clock /></li>
-          {/* <li></li> */}
           {this.props.user.comp === null ? this.getVolumeLi() : null}
-          {/* <li></li> */}
-          {this.getAvatarLi()}
-          {/* <li className="expandable hamburger" onClick={this.props.toggleSideBar}><i className="fas fa-bars"></i></li>*/}
         </ul>
       </header>
     )
@@ -218,51 +187,6 @@ class Header extends React.Component {
     return (ui.isMobile || ui.hasFooter);
   }
 
-  chatClicked = () => {
-    this.props.resetMessgeNotification();
-    this.props.toggleChat();
-  }
-
-
-
-  getMobileRightMenus() {
-    return (
-      <ul className="right">
-        <li className="header-avatar" onClick={this.props.avatarClicked}>{this.getAvatar()}</li>
-      </ul>
-    );
-  }
-
-  liveStreamClick = () => {
-    this.props.toggleLiveStream();
-    this.openInNewTab('https://tulane.zoom.us/j/96008889892', "_blank");
-  }
-
-  openInNewTab = (url) => {
-    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-    if (newWindow) newWindow.opener = null
-  }
-
-
-  getLiveStreamLi = () => {
-    const { menu, user, isClosed } = this.props;
-    let classVol = "expandable icon" + " closed";//(menu.isLiveStreamHidden ? " closed" : " opened");
-    classVol += ((this.state.liveStreamOn && !menu.hasClickedLiveStream) ? " liveStreamOn" : "");
-
-    if (isClosed)
-      return null;
-    else if (user.comp !== null)
-      return null;
-    return (
-      <li className={classVol} onClick={this.liveStreamClick}>
-        {/* onClick={this.props.toggleLiveStream} */}
-        {/* <Volume isMuted={this.props.music.isMuted} /> */}
-        {/* {this.getVolumeIcon()} */}
-        <LiveIcon />
-      </li>
-    )
-  }
-
   getVolumeLi = () => {
     const classVol = "expandable icon opened";
     return (
@@ -282,81 +206,10 @@ class Header extends React.Component {
     return <VolumeUp />
   }
 
-  getAvatarLi = () => {
-    return (
-      <li className="header-avatar expandable" onClick={this.props.avatarClicked}>
-        {this.getAvatar()}
-      </li>
-    )
-  }
-
-  getFaqLi = () => {
-    const classFaq = "expandable icon" + (this.props.menu.isFaqHidden ? " closed" : " opened");
-
-    return (
-      <li className={classFaq} onClick={this.props.toggleFaq}>
-        <HelpOutlineIcon fontSize="inherit" />
-      </li>
-    )
-  }
-
-  getMapLi = () => {
-    var classMap = "icon";
-    const isHome = this.props.user.room === "gallery";
-    if (isHome) {
-      classMap += (this.props.menu.isMapHidden ? " closed" : " opened");
-      classMap += " expandable";
-    }
-    else classMap += " closed disabled";
-
-    if (!isHome)
-      return null;
-    return (
-      <li className={classMap} onClick={this.props.toggleMap} >
-        <MapIcon fontSize="inherit" />
-      </li >
-    )
-  }
-
-  getChatLi = () => {
-    var classChat = "expandable icon" + (this.props.menu.isChatHidden ? " closed" : " opened");
-    if (this.props.chatNotifications)
-      classChat += " notify";
-    return (
-      <li className={classChat} onClick={this.chatClicked}>
-        <ChatIcon fontSize="inherit" />
-        {this.getChatNotification()}
-      </li>
-    )
-  }
-
-  getChatNotification = () => {
-    let n = this.props.chatNotifications;
-    if (n) {
-      if (n > 10)
-        return (<div className="notification"><span className="badge"><NotifyIcon /></span></div>);
-      return (<div className="notification"><span className="badge">{n}</span></div>);
-    }
-    return null;
-  }
-
-  getAvatar = () => {
-    const { user } = this.props;
-    if (user) {
-      return (user.avatar);
-    }
-    return (
-      <AccountCircleIcon />
-    );
-  }
-
-
 }
 
 const mapStateToProps = (state) => {
   return {
-    menu: state.menu,
-    chatNotifications: state.chatNotifications,
     music: state.music,
     ui: state.ui,
     user: state.user
@@ -365,13 +218,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = () => {
   return {
-    toggleMap,
-    toggleFaq,
-    toggleChat,
-    toggleLiveStream,
-    resetMessgeNotification,
-    toggleUserIcons,
-    toggleVolume,
+    toggleVolume
 
   }
 }

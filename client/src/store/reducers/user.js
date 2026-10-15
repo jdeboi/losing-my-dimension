@@ -2,9 +2,7 @@ import { SETUSERROOM, REMOVEUSERCOMP, SETUSERCOMP, SETUSER, MOVEUSER, MOVEUSERRO
 import { SETUSERACTIVECHAT, SETUSERHOVERCHAT, USERHOVERCHATLEAVE } from '../actions/userActiveChat';
 
 import Cookies from 'js-cookie';
-import socket from "../../components/shared/Socket/Socket";
 
-import { globalConfig } from '../../components/sketches/Gallery/constants';
 
 // reducer (check what to do with action)
 const initState = { 
@@ -14,8 +12,8 @@ const initState = {
   comp: null, 
   roomX: 0, 
   roomY: 0, 
-  x: globalConfig.stepS / 2, 
-  y: globalConfig.stepS / 2, 
+  x: 0, 
+  y: 0, 
   hasWine: null, 
   needsWine: false, 
   hasCheese: null, 
@@ -35,9 +33,6 @@ export const userReducer = (state = initState, action) => {
       user.roomX = 50;
       user.roomY = 50;
       user.room = nextRoom;
-      socket.emit("leaveRoom", prevRoom);
-      socket.emit("joinRoom", nextRoom);
-      socket.emit("setUser", user);
       return user;
 
     case SETUSER:
@@ -51,7 +46,6 @@ export const userReducer = (state = initState, action) => {
       Cookies.set("hasAvatar", true);
       Cookies.set("avatar", user.avatar);
       Cookies.set("userName", user.userName);
-      socket.emit("setUser", user);
 
       return user;
 
@@ -79,7 +73,6 @@ export const userReducer = (state = initState, action) => {
         user.needsCocktail = false;
         user.hasCocktail = new Date();
       }
-      socket.emit("setUser", user);
       return user;
 
     case MOVEUSERROOM:
@@ -95,19 +88,16 @@ export const userReducer = (state = initState, action) => {
         user.needsWine = false;
         user.hasWine = new Date();
       }
-      socket.emit("setUser", user);
       return user;
 
     case SETWINE:
       user.needsWine = action.payload.needsWine;
       user.hasWine = action.payload.hasWine;
-      socket.emit("setUser", user);
       return user;
 
     case RESETWINE:
       user.hasWine = false;
       user.needsWine = null;
-      socket.emit("setUser", user);
       return user;
 
     ////////////////////////
@@ -118,19 +108,16 @@ export const userReducer = (state = initState, action) => {
         user.needsCheese = false;
         user.hasCheese = new Date();
       }
-      socket.emit("setUser", user);
       return user;
 
     case SETCHEESE:
       user.needsCheese = action.payload.needsCheese;
       user.hasCheese = action.payload.hasCheese;
-      socket.emit("setUser", user);
       return user;
 
     case RESETCHEESE:
       user.needsCheese = false;
       user.hasCheese = null;
-      socket.emit("setUser", user);
       return user;
 
 
@@ -141,19 +128,16 @@ export const userReducer = (state = initState, action) => {
         user.needsCocktail = false;
         user.hasCocktail = new Date();
       }
-      socket.emit("setUser", user);
       return user;
 
     case SETCOCKTAIL:
       user.needsCocktail = action.payload.needsCocktail;
       user.hasCocktail = action.payload.hasCocktail;
-      socket.emit("setUser", user);
       return user;
 
     case RESETCOCKTAIL:
       user.needsCocktail = false;
       user.hasCocktail = null;
-      socket.emit("setUser", user);
       return user;
 
     default:

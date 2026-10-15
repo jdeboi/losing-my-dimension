@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { setSketchMusic } from '../../../store/actions/music';
 
 // Babylon
-import { AnaglyphUniversalCamera, HemisphericLight, Vector3, StandardMaterial, VideoTexture, Color4, Mesh } from 'babylonjs';
+import { AnaglyphUniversalCamera, HemisphericLight, Vector3, StandardMaterial, VideoTexture, Texture, Color4, Mesh } from 'babylonjs';
 import BabylonScene from '../../shared/Babylon.jsx';
 import Emoji from './Emoji';
 
@@ -66,10 +66,10 @@ class Flush extends React.Component {
 
 
     var mat = new StandardMaterial("groundMaterial", this.scene);
-    this.vidTex = new VideoTexture("video", window.AWS + "/vorTech/whirl2.mp4", this.scene, true);
+    // always silent; muted up front so browsers allow the autoplay
+    const vidSettings = { autoPlay: true, loop: true, autoUpdateTexture: true, muted: true };
+    this.vidTex = new VideoTexture("video", window.AWS + "/vorTech/whirl2.mp4", this.scene, true, false, Texture.TRILINEAR_SAMPLINGMODE, vidSettings);
     this.vidTex.video.volume = 0;
-    // always silent, so mark muted to let browsers autoplay it
-    this.vidTex.video.muted = true;
     // this.vidTex.video.play(); // is this needed?
     mat.diffuseTexture = this.vidTex;
 
